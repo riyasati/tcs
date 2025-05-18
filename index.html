@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TCS Fresher Hiring NQT 2025</title>
+    <style>
+      /* Reset and base styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Arial, sans-serif;
+        background: #fff;
+        color: #222;
+        line-height: 1.7;
+      }
+
+      /* Header */
+      .main-header {
+        background: #181818;
+        color: #fff;
+        position: sticky;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      }
+
+      .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0.7rem 3vw;
+      }
+
+      .logo img {
+        height: 38px;
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        gap: 1.5rem;
+      }
+
+      .nav-links li a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 1.05rem;
+        padding: 0.5rem 0.2rem;
+        transition: color 0.2s;
+        display: flex;
+        align-items: center;
+        gap: 0.3em;
+      }
+
+      .nav-links li a.active,
+      .nav-links li a:hover {
+        color: #1a73e8;
+      }
+
+      .header-icons {
+        display: flex;
+        align-items: center;
+        gap: 1.2rem;
+      }
+
+      .header-icons .fa-search {
+        font-size: 1.2rem;
+        cursor: pointer;
+        color: #fff;
+        opacity: 0.8;
+        transition: color 0.2s;
+      }
+      .header-icons .fa-search:hover {
+        color: #1a73e8;
+      }
+      .tata-logo {
+        height: 32px;
+        margin-left: 0.5rem;
+      }
+
+      .hamburger {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+        margin-left: 1rem;
+      }
+      .hamburger span {
+        width: 25px;
+        height: 3px;
+        background: #fff;
+        margin: 3px 0;
+        border-radius: 2px;
+      }
+
+      /* Hero Section */
+      .hero-nqt {
+        position: relative;
+        min-height: 340px;
+        background: url("https://img.staticmb.com/mbcontent/images/uploads/2022/12/tcs-careers.jpg")
+          center/cover no-repeat;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-start;
+      }
+      .hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(120deg, #181818 70%, #3a1c71 100%);
+        opacity: 0.85;
+        z-index: 1;
+      }
+      .hero-content-nqt {
+        position: relative;
+        z-index: 2;
+        padding: 3.5rem 3vw 2.5rem 3vw;
+        color: #fff;
+        max-width: 700px;
+      }
+      .hero-content-nqt h1 {
+        font-size: 2.8rem;
+        font-weight: 700;
+        margin-bottom: 0.7rem;
+        line-height: 1.1;
+      }
+      .hero-content-nqt p {
+        font-size: 1.3rem;
+        font-weight: 400;
+        margin-bottom: 0.2rem;
+      }
+
+      /* Breadcrumb */
+      .breadcrumb {
+        font-size: 0.98rem;
+        color: #b3b3b3;
+        margin-bottom: 1.2rem;
+        letter-spacing: 0.03em;
+      }
+      .breadcrumb span {
+        color: #fff;
+        opacity: 0.7;
+      }
+
+      /* Main Content */
+      .main-content-nqt {
+        max-width: 900px;
+        margin: 2.5rem auto 2rem auto;
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
+        padding: 2.5rem 2rem 2rem 2rem;
+      }
+      .blue-heading {
+        color: #1a73e8;
+        font-size: 2.1rem;
+        font-weight: 700;
+        margin-bottom: 1.2rem;
+        letter-spacing: 0.01em;
+      }
+      .key-dates {
+        margin: 1.5rem 0 1.5rem 1.2rem;
+        padding-left: 1.2rem;
+        color: #222;
+        font-size: 1.08rem;
+      }
+      .key-dates li {
+        margin-bottom: 0.5rem;
+      }
+      .blue-text {
+        color: #1a73e8;
+        font-weight: 600;
+      }
+      .hiring-categories {
+        margin: 1.2rem 0 0.5rem 1.2rem;
+        padding-left: 1.2rem;
+        color: #222;
+        font-size: 1.08rem;
+      }
+      .hiring-categories li {
+        margin-bottom: 0.3rem;
+        list-style: disc;
+      }
+
+      /* Footer */
+      footer {
+        background: #181818;
+        color: #fff;
+        padding: 2.5rem 0 1rem 0;
+        margin-top: 2rem;
+      }
+      .footer-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 2rem;
+        padding: 0 2vw;
+      }
+      .footer-section h4 {
+        margin-bottom: 1rem;
+        color: #1a73e8;
+        font-size: 1.1rem;
+      }
+      .footer-section ul {
+        list-style: none;
+        padding: 0;
+      }
+      .footer-section ul li {
+        margin-bottom: 0.5rem;
+      }
+      .footer-section a {
+        color: #fff;
+        text-decoration: none;
+        opacity: 0.85;
+        transition: color 0.2s, opacity 0.2s;
+      }
+      .footer-section a:hover {
+        color: #1a73e8;
+        opacity: 1;
+      }
+      .social-links {
+        display: flex;
+        gap: 1rem;
+        margin-top: 0.5rem;
+      }
+      .social-links a {
+        font-size: 1.4rem;
+        color: #fff;
+        opacity: 0.8;
+        transition: color 0.2s, opacity 0.2s;
+      }
+      .social-links a:hover {
+        color: #1a73e8;
+        opacity: 1;
+      }
+      .footer-bottom {
+        text-align: center;
+        margin-top: 2rem;
+        padding-top: 1.2rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        font-size: 0.98rem;
+        opacity: 0.7;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 1000px) {
+        .main-content-nqt {
+          padding: 2rem 1rem 1.5rem 1rem;
+        }
+        .hero-content-nqt {
+          padding: 2.5rem 2vw 1.5rem 2vw;
+        }
+      }
+      @media (max-width: 768px) {
+        .navbar {
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 0.7rem 4vw;
+        }
+        .nav-links {
+          flex-direction: column;
+          width: 100%;
+          gap: 0.7rem;
+          background: #181818;
+          position: absolute;
+          top: 60px;
+          left: 0;
+          display: none;
+          padding: 1rem 0;
+        }
+        .nav-links li {
+          width: 100%;
+          text-align: left;
+          padding-left: 1.5rem;
+        }
+        .hamburger {
+          display: flex;
+        }
+        .header-icons {
+          margin-top: 0.5rem;
+        }
+        .hero-content-nqt h1 {
+          font-size: 2rem;
+        }
+        .main-content-nqt {
+          margin: 1.2rem 0;
+        }
+      }
+      @media (max-width: 600px) {
+        .main-content-nqt {
+          padding: 1.2rem 0.5rem 1rem 0.5rem;
+        }
+        .footer-content {
+          grid-template-columns: 1fr;
+          gap: 1.2rem;
+        }
+      }
+    </style>
+    <!-- FontAwesome CDN for icons -->
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header class="main-header">
+      <nav class="navbar">
+        <div class="logo">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNHBofwCV4O4BECoAg3LOvMk6FIUGbvizCZA&s"
+            alt="TCS Logo"
+          />
+        </div>
+        <ul class="nav-links">
+          <li>
+            <a href="do.html">What we do <i class="fas fa-chevron-down"></i></a>
+          </li>
+          <li>
+            <a href="#" class="active"
+              >Careers <i class="fas fa-chevron-down"></i
+            ></a>
+          </li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <div class="header-icons">
+          <i class="fas fa-search"></i>
+          <img
+            src="https://static.vecteezy.com/system/resources/previews/020/336/733/non_2x/tata-logo-tata-icon-free-free-vector.jpg"
+            alt="Tata Logo"
+            class="tata-logo"
+          />
+        </div>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-nqt">
+      <div class="hero-overlay"></div>
+      <div class="hero-content-nqt">
+        <div class="breadcrumb">
+          <span>TCS Careers</span>
+        </div>
+        <h1>TCS Fresher Hiring NQT 2025</h1>
+        <p>Join the largest IT services company in India</p>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content-nqt">
+      <h2 class="blue-heading">Key Dates</h2>
+      <ul class="key-dates">
+        <li><span class="blue-text">Registration Start:</span> May 15, 2025</li>
+        <li><span class="blue-text">Registration End:</span> June 15, 2025</li>
+        <li><span class="blue-text">Exam Date:</span> July 1, 2025</li>
+        <li>
+          <span class="blue-text">Result Announcement:</span> July 15, 2025
+        </li>
+      </ul>
+
+      <h2 class="blue-heading">Hiring Categories</h2>
+      <ul class="hiring-categories">
+        <li>Software Engineer - Fresher</li>
+        <li>System Analyst</li>
+        <li>IT Support</li>
+      </ul>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>About TCS</h4>
+          <ul>
+            <li><a href="#">Company Overview</a></li>
+            <li><a href="#">Leadership</a></li>
+            <li><a href="#">Awards</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Careers</h4>
+          <ul>
+            <li><a href="#">Campus Hiring</a></li>
+            <li><a href="#">Experienced Professionals</a></li>
+            <li><a href="#">Internships</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contact Us</h4>
+          <ul>
+            <li><a href="#">Contact Details</a></li>
+            <li><a href="#">Support</a></li>
+            <li><a href="#">FAQs</a></li>
+          </ul>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="LinkedIn"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <a href="#" aria-label="Instagram"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2025 Tata Consultancy Services. All rights reserved.
+      </div>
+    </footer>
+
+    <script>
+      // Hamburger menu toggle for mobile view
+      const hamburger = document.querySelector(".hamburger");
+      const navLinks = document.querySelector(".nav-links");
+
+      hamburger.addEventListener("click", () => {
+        if (navLinks.style.display === "flex") {
+          navLinks.style.display = "none";
+        } else {
+          navLinks.style.display = "flex";
+        }
+      });
+    </script>
+  </body>
+</html>
